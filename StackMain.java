@@ -24,6 +24,18 @@ public class StackMain {
         Integer poppedElement = stack.pop();
         System.out.println("Popped Element: " + poppedElement);
 
+        // Use case 3: queue
+        Queue<Integer> queue = new Queue<>();
+
+        // enqueue
+        queue.enqueue(56);
+        queue.enqueue(30);
+        queue.enqueue(70);
+
+        // Display the initial stack
+        System.out.println("Initial Queue:");
+        queue.display();
+
     }
 }
 
@@ -61,6 +73,24 @@ class Stack<T> {
     }
 
     // Display the stack
+    public void display() {
+        for (T data : List) {
+            System.out.print(data + " ");
+        }
+
+    }
+}
+
+class Queue<T> {
+
+    LinkedList<T> List = new LinkedList<>();
+
+    // Enqueue operation
+    public void enqueue(T data) {
+        List.addLast(data);
+    }
+
+    // Display the queue
     public void display() {
         for (T data : List) {
             System.out.print(data + " ");
