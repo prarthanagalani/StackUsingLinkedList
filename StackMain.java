@@ -2,7 +2,6 @@ package StackUsingLinkedList;
 
 import java.util.LinkedList;
 
-
 public class StackMain {
 
     public static void main(String args[]) {
@@ -16,6 +15,14 @@ public class StackMain {
         // Display the initial stack
         System.out.println("Initial Stack:");
         stack.display();
+
+        // Perform peek operation
+        Integer topElement = stack.peek();
+        System.out.println("Top Element: " + topElement);
+
+        // Perform pop operation
+        Integer poppedElement = stack.pop();
+        System.out.println("Popped Element: " + poppedElement);
 
     }
 }
@@ -36,6 +43,16 @@ class Stack<T> {
         }
         return List.removeFirst();
 
+    }
+
+    // peak
+    public T peek() {
+        if (isEmpty()) {
+            System.out.println("Stack is empty");
+            return null;
+        }
+
+        return List.getFirst();
     }
 
     // Check if the stack is empty
