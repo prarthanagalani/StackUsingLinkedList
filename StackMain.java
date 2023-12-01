@@ -97,4 +97,18 @@ class Queue<T> {
         }
 
     }
+
+    // Dequeue operation
+    public T dequeue() {
+        if (isEmpty()) {
+            System.out.println("Queue is empty");
+            return null;
+        }
+        return List.removeFirst();
+    }
+
+    // Check if the queue is empty
+    public boolean isEmpty() {
+        return List.isEmpty();
+    }
 }
